@@ -259,7 +259,7 @@ if((i_mode==UPDATEFILEPATH)&&(temp!=NULL))
 	temp1 =(struct nAryTreeNode *)malloc(sizeof(struct nAryTreeNode)*1);
 	temp1->s_inode =(struct fileDescriptor *)malloc(sizeof(struct fileDescriptor)*1);
 	node=(struct binarySearchTree *)malloc(sizeof(struct binarySearchTree)*1);
-/*	v_delete(temp->s_inode->ui_inodeNo,temp->s_inode->cptr_fileName);*/
+	v_delete(temp->s_inode->ui_inodeNo,temp->s_inode->cptr_fileName);
 	strcpy(temp1->s_inode->cptr_filePath,temp->s_inode->cptr_filePath);
 	strcat(temp1->s_inode->cptr_filePath,temp->s_inode->cptr_fileName);
 	node=s_searchBSTNode(sPtr_rootBST,temp1->s_inode->cptr_filePath+1);
@@ -282,8 +282,7 @@ if((i_mode==UPDATEFILEPATH)&&(temp!=NULL))
 				strcat(temp1->s_inode->cptr_filePath,"/");
 				}
 	strcat(temp1->s_inode->cptr_filePath,temp->s_inode->cptr_fileName);
-/*	v_loadHashTable(temp->s_inode->ui_inodeNo,temp->s_inode->cptr_fileName,temp->s_inode->cptr_filePath);
-	printList();*/
+	v_loadHashTable(temp->s_inode->ui_inodeNo,temp->s_inode->cptr_fileName,temp->s_inode->cptr_filePath);
 	node=s_getBSTNode(temp1->s_inode->cptr_filePath,temp->s_inode->ui_inodeNo);
 	sPtr_rootBST=s_insertBSTNode(sPtr_rootBST,node);
      if( *(temp->s_inode->cptr_filePath 

@@ -65,7 +65,7 @@ int i_createvfs(char *vfsLabel,unsigned int ui_size){
     ui_size = ui_size * 1024; /* Convert the file size into bytes */
     s_superBlock.ui_totalBlocks = ui_size/VFS_BLOCKSIZE; /* Block size is 1Kb */
 
-    for(i = 0; i < s_superBlock.ui_totalBlocks; i++){
+    for(i = 0; i < ui_size; i++){
          memset((void *)&s_block,'\0',VFS_BLOCKSIZE);
          fwrite(&s_block,sizeof(struct dataBlock),1,fpVfs);
     }
