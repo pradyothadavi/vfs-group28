@@ -1,7 +1,7 @@
 #ifndef _FILE_OPS_
 #define _FILE_OPS_
 
-#define FILEOPS_DEBUG 1
+#define FILEOPS_DEBUG 0
 
 #define TEXTFILE 101
 #define REGULARFILE 102

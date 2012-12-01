@@ -6,7 +6,7 @@ Group No : 28
 Version No : 1.0
 */
 
-#define MAIN_DEBUG 1
+#define MAIN_DEBUG 0
 
 #define BUFSIZE 200
 

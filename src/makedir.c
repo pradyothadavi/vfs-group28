@@ -78,7 +78,7 @@ int i_makedir(char *cPtr_directoryPath,char *cPtr_directoryName){
                                                   cPtr_filePath,'d',ui_inodeNo,
                                                   0,ui_dientryBlockNo);
        
-              /*v_loadHashTable(ui_inodeNo,cPtr_directoryName,cPtr_filePath);*/
+              v_loadHashTable(ui_inodeNo,cPtr_directoryName,cPtr_filePath);
               currentNode = s_getNAryTreeNode();
               currentNode->s_inode = s_newInode;
               
@@ -149,7 +149,7 @@ int i_makedir(char *cPtr_directoryPath,char *cPtr_directoryName){
                         previousNode = s_insertNAryTreeNode(currentNode,
                                                             newNAryNode);
                         currentNode = newNAryNode;
-                       /*v_loadHashTable(ui_inodeNo,cPtr_token,cPtr_filePath);*/
+                        v_loadHashTable(ui_inodeNo,cPtr_token,cPtr_filePath);
                         /* Update Binary Search Tree */
                         strncpy(cPtr_filePath
                                +ui_noOfCharactersParsed,cPtr_token,ui_tokenLength);
@@ -216,7 +216,7 @@ int i_makedir(char *cPtr_directoryPath,char *cPtr_directoryName){
               newNAryNode->s_inode = s_newInode;
               previousNode = s_insertNAryTreeNode(currentNode,newNAryNode);
               currentNode = newNAryNode;
-              /*v_loadHashTable(ui_inodeNo,cPtr_directoryName,cPtr_filePath);*/
+              v_loadHashTable(ui_inodeNo,cPtr_directoryName,cPtr_filePath);
               if( *(cPtr_filePath+ui_dirPathLength) != '/'){
                    strncpy(cPtr_filePath+ui_dirPathLength,
                            cPtr_directoryName,

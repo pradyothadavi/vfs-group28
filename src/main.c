@@ -364,9 +364,8 @@ void searchfile ( char *P1, char *P2 ){
     int i_retVal = 0;
 
     i_retVal = i_searchfile(P1,P2);
-    if( SUCCESS == i_retVal ) {
-         printf("searchfile_SUCCESS \n");
-    }
+    
+    printf("searchfile_SUCCESS %d\n",i_retVal);
 }
 
 /*

@@ -140,7 +140,6 @@ int i_addfile(char *cPtr_destinationPath,char *cPtr_fileName,char *cPtr_sysPath)
                         cPtr_dirPath = (char *)malloc(sizeof(char)*(ui_noOfCharactersParsed+1));
                         strncpy(cPtr_dirPath,cPtr_destinationPath,ui_noOfCharactersParsed);
                         *(cPtr_dirPath + (ui_noOfCharactersParsed+1)) = '\0';
-                        printf("Path %s \n",cPtr_dirPath);
                         i_makedir(cPtr_dirPath,cPtr_token);
                         if( NULL != cPtr_dirPath ){
                              free(cPtr_dirPath);
@@ -190,7 +189,6 @@ int i_addfile(char *cPtr_destinationPath,char *cPtr_fileName,char *cPtr_sysPath)
               *(cPtr_filePath+strlen(cPtr_destinationPath)) = '/';
               *(cPtr_filePath+strlen(cPtr_destinationPath)+1) = '\0';
          }
-         printf("Path %s \n",cPtr_filePath);
          s_newInode = s_createFileDescriptor(cPtr_fileName,cPtr_filePath,fileType,ui_inodeNo,0,ui_dataBlockNo);
          newFileNode = s_getNAryTreeNode();
          newFileNode->s_inode = s_newInode;

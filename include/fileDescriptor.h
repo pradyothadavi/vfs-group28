@@ -12,7 +12,7 @@ Version No : 1.0
 
 #define VFS_FILEPATHLEN 256
 
-#define VFS_DIRECT_DATABLOCK 16
+#define VFS_DIRECT_DATABLOCK 4
 
 #define FILE_CHARACTERS 2
 
